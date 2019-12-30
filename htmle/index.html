@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <h1>111111</h1>
+    <p></p>
+    <form action="http://192.168.8.36:8081/users" method="GET">
+        userAccount: <input type="text" name="first_name"> <br>
+
+        userPassword: <input type="text" name="last_name">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    $.get("http://192.168.8.36:8081/users", function (data, status) {
+        console.log(data);
+        $('p').html(data)
+    });
+</script>
+
+</html>
